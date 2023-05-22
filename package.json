@@ -7,7 +7,15 @@
     "test": "test"
   },
   "scripts": {
-    "test": "hardhat test"
+    "test": "hardhat test",
+    "clean": "hardhat clean",
+    "compile": "hardhat compile",
+    "coverage": "hardhat coverage",
+    "export-abi": "hardhat export-abi",
+    "clear-abi": "hardhat clear-abi",
+    "lint:sol": "hardhat check",
+    "size": "npx hardhat size-contracts",
+    "lint": "eslint ./**/*.ts"
   },
   "author": "Devan Non <devanon@chainstride.capital>",
   "license": "Apache-2.0",
@@ -27,5 +35,9 @@
     "ts-node": "^10.7.0",
     "typechain": "^8.0.0",
     "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.8.3",
+    "@openzeppelin/contracts-upgradeable": "^4.8.3"
   }
 }

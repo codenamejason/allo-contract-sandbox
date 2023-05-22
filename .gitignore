@@ -2,12 +2,18 @@
 cache/
 out/
 
-# JS
 node_modules/
-
-#Hardhat files
-cache_hardhat/
-artifacts/
-
-#Hardhat plugin files
+.env
+coverage
+coverage.json
 typechain-types/
+/.eslintcache
+
+# Hardhat files
+cache
+cache_hardhat/
+artifacts
+abis/
+
+artifacts-zk
+cache-zk

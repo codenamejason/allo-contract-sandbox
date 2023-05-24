@@ -1,6 +1,53 @@
-[default]
-src = 'src'
-out = 'out'
-libs = ['lib']
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+optimizer = true
+optimizer_runs = 20_000
+solc = "0.8.13"
+
+[rpc_endpoints]
+mainnet = "https://mainnet.infura.io/v3/${FOUNDRY_INFURA_KEY}"
+optimism = "https://optimism-mainnet.infura.io/v3/${FOUNDRY_INFURA_KEY}"
+goerli = "https://goerli.infura.io/v3/${FOUNDRY_INFURA_KEY}"
+sepolia = "https://rpc.sepolia.finance"
+fantom = "https://rpcapi.fantom.network"
+polygon = "https://rpc-mainnet.maticvigil.com"
+mumbai = "https://rpc-mumbai.maticvigil.com"
+arbitrum = "https://arbitrum-mainnet.infura.io/v3/${FOUNDRY_INFURA_KEY}"
+arbitrum-goerli = "https://arbitrum-goerli.infura.io/v3/${FOUNDRY_INFURA_KEY}"
+
+[etherscan]
+mainnet = { key = "${ETHERSCAN_MAINNET_KEY}" }
+optimism = { key = "${OPTIMISTIC_ETHERSCAN_API_KEY}" }
+
+
+[profile.hardhat]
+src = "src"
+out = "artifacts"
+libs = ["node_modules"]
+
+[fuzz]
+runs = 256
+max_test_rejects = 65536
+seed = '0x3e8'
+dictionary_weight = 40
+include_storage = true
+include_push_bytes = true
+
+[invariant]
+runs = 256
+depth = 15
+fail_on_revert = false
+call_override = false
+dictionary_weight = 80
+include_storage = true
+include_push_bytes = true
+shrink_sequence = true
+
+[fmt]
+line_length = 100
+tab_width = 2
+bracket_spacing = true
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config

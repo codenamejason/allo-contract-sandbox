@@ -9,6 +9,7 @@
   "scripts": {
     "test": "hardhat test",
     "clean": "hardhat clean",
+    "chain:hh": "hardhat node --network hardhat",
     "compile": "hardhat compile",
     "coverage": "hardhat coverage",
     "export-abi": "hardhat export-abi",

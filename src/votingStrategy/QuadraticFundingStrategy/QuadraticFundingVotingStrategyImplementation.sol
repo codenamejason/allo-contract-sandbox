@@ -1,12 +1,13 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 pragma solidity 0.8.13;
 
-import "@openzeppelin-upgradeable/contracts/proxy/utils/Initializable.sol";
-import "@openzeppelin-upgradeable/contracts/security/ReentrancyGuardUpgradeable.sol";
-import "@openzeppelin-upgradeable/contracts/utils/AddressUpgradeable.sol";
-import "@openzeppelin-upgradeable/contracts/token/ERC20/utils/SafeERC20Upgradeable.sol";
+import { Initializable } from "@openzeppelin-upgradeable/contracts/proxy/utils/Initializable.sol";
+import { ReentrancyGuardUpgradeable } from "@openzeppelin-upgradeable/contracts/security/ReentrancyGuardUpgradeable.sol";
+import { AddressUpgradeable } from "@openzeppelin-upgradeable/contracts/utils/AddressUpgradeable.sol";
+import { SafeERC20Upgradeable } from "@openzeppelin-upgradeable/contracts/token/ERC20/utils/SafeERC20Upgradeable.sol";
+import { IERC20Upgradeable } from "@openzeppelin-upgradeable/contracts/token/ERC20/IERC20Upgradeable.sol";
 
-import "../IVotingStrategy.sol";
+import { IVotingStrategy } from "../IVotingStrategy.sol";
 
 /**
  * Allows voters to cast multiple weighted votes to grants with one transaction
